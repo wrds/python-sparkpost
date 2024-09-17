@@ -89,6 +89,9 @@ class SparkPostMessage(dict):
 
         if hasattr(message, 'campaign'):
             formatted['campaign'] = message.campaign
+        
+        if hasattr(message, 'start_time'):
+            formatted['start_time'] = message.start_time
 
         if message.extra_headers:
             formatted['custom_headers'] = message.extra_headers
